@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  latest:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: ["./run.sh"]
+  pinned:
+    build:
+      context: .
+      dockerfile: latest.Dockerfile
+    command: ["./run.sh"]
